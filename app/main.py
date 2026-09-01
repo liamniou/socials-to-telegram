@@ -43,7 +43,7 @@ def echo_all(message):
     track_user(message.from_user.id)
     
     for url in extractor.find_urls(message.text):
-        if any(x in url for x in ["tiktok.com", "instagram.com", "twitter.com", "youtube.com"]):
+        if any(x in url for x in ["tiktok.com", "instagram.com", "twitter.com", "youtube.com", "threads.net", "threads.com"]):
             # Track URL request
             track_url_requested(url)
             
